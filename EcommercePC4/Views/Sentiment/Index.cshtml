@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Análisis de Sentimiento";
+}
+
+<h2>Análisis de Sentimiento</h2>
+
+<form method="post" asp-action="Analyze">
+    <textarea name="userText" rows="4" cols="50" required></textarea><br />
+    <button type="submit">Analizar</button>
+</form>
+
+@if (ViewBag.Prediction != null)
+{
+    <h3>Resultado: @ViewBag.Prediction</h3>
+    <p>Confianza: @ViewBag.Score</p>
+}

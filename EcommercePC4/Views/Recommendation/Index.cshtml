@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Recomendación de Productos";
+}
+
+<h2>Recomendación de Productos</h2>
+
+<form method="post" asp-action="Recommend">
+    <label for="userId">Ingrese UserId (ej: 1 - 8):</label>
+    <input type="text" name="userId" required />
+    <button type="submit">Recomendar</button>
+</form>
+
+@if (ViewBag.Recommendations != null)
+{
+    <h3>Recomendaciones para usuario @ViewBag.UserId:</h3>
+    <ul>
+        @foreach (var item in ViewBag.Recommendations)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
