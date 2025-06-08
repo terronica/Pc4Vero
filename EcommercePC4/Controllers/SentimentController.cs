@@ -12,7 +12,10 @@ namespace EcommercePC4.Controllers
             _service = new SentimentService();
         }
 
-        public IActionResult Index() => View();
+        public IActionResult Index()
+        {
+            return View();
+        }
 
         [HttpPost]
         public IActionResult Analyze(string userText)
