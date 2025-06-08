@@ -20,7 +20,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Sentiment}/{action=Index}/{id?}");
 
-EcommercePC4.MLModels.SentimentModelTrainer.TrainAndSaveModel();
+//EcommercePC4.MLModels.SentimentModelTrainer.TrainAndSaveModel();
 
 
 app.Run();
