@@ -3,6 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copiamos la solución y el proyecto
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
 COPY ["EcommercePC4.sln", "."]
 COPY ["Pc4Vero/EcommercePC4/EcommercePC4.csproj", "Pc4Vero/EcommercePC4/"]
 
