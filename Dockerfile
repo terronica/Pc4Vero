@@ -4,7 +4,7 @@ WORKDIR /src
 
 # Copiamos la solución y el proyecto
 COPY ["EcommercePC4.sln", "."]
-COPY ["Pc4sent/EcommercePC4/EcommercePC4.csproj", "Pc4sent/EcommercePC4/"]
+COPY ["Pc4Vero/EcommercePC4/EcommercePC4.csproj", "Pc4Vero/EcommercePC4/"]
 
 # Restauramos los paquetes
 RUN dotnet restore "EcommercePC4.sln"
@@ -13,7 +13,7 @@ RUN dotnet restore "EcommercePC4.sln"
 COPY . .
 
 # Compilamos el proyecto
-WORKDIR "/src/Pc4sent/EcommercePC4"
+WORKDIR "/src/Pc4Vero/EcommercePC4"
 RUN dotnet build "EcommercePC4.csproj" -c Release -o /app/build
 
 # Etapa de publicación
