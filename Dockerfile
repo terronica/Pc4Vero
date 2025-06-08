@@ -2,34 +2,31 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiamos la solución y el proyecto
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
+# Copiar solución y proyecto
 COPY ["EcommercePC4.sln", "."]
-COPY ["Pc4Vero/EcommercePC4/EcommercePC4.csproj", "Pc4Vero/EcommercePC4/"]
+COPY ["EcommercePC4/EcommercePC4.csproj", "EcommercePC4/"]
 
-# Restauramos los paquetes
+# Restaurar paquetes
 RUN dotnet restore "EcommercePC4.sln"
 
-# Copiamos el resto del código
+# Copiar el resto del código - espechal
 COPY . .
 
-# Compilamos el proyecto
-WORKDIR "/src/Pc4Vero/EcommercePC4"
+# Compilar
+WORKDIR "/src/EcommercePC4"
 RUN dotnet build "EcommercePC4.csproj" -c Release -o /app/build
 
 # Etapa de publicación
 FROM build AS publish
 RUN dotnet publish "EcommercePC4.csproj" -c Release -o /app/publish
 
-# Etapa de runtime
+# Etapa runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-# Configurar puerto para ASP.NET Core
+# Configurar y exponer puerto
 ENV ASPNETCORE_URLS=http://*:8080
 EXPOSE 8080
 
-# Ejecutar la app
 ENTRYPOINT ["dotnet", "EcommercePC4.dll"]
