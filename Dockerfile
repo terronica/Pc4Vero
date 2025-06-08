@@ -12,9 +12,12 @@ RUN dotnet restore "EcommercePC4.sln"
 # Copiar el resto del código - espechal
 COPY . .
 
+COPY EcommercePC4/MLModels EcommercePC4/MLModels
+
 # Compilar
 WORKDIR "/src/EcommercePC4"
 RUN dotnet build "EcommercePC4.csproj" -c Release -o /app/build
+
 
 # Etapa de publicación
 FROM build AS publish
