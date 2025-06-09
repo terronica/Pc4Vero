@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using EcommercePC4.MLModels;
-using static EcommercePC4.MLModel;
+using EcommercePC4.MLModels;
+
 
 namespace EcommercePC4.MLModels
 {
@@ -16,13 +17,13 @@ namespace EcommercePC4.MLModels
 
             foreach (var productId in allProducts)
             {
-                var input = new MLModel.ModelInput
+                var input = new ModelInput
                 {
                     UserId = userId,
                     ProductId = productId
                 };
 
-                var prediction = MLModel.Predict(input);
+                var prediction = MLModel.Predict(input); 
                 recommendations.Add((productId, prediction.Score));
             }
 

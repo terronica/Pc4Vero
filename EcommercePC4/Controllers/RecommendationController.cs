@@ -7,9 +7,9 @@ namespace EcommercePC4.Controllers
     {
         private readonly RecommendationService _service;
 
-        public RecommendationController()
+        public RecommendationController(RecommendationService service)
         {
-            _service = new RecommendationService();
+            _service = service;
         }
 
         public IActionResult Index()
