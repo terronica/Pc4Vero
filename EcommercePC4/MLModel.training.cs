@@ -13,7 +13,7 @@ namespace EcommercePC4
 {
     public partial class MLModel
     {
-        public const string RetrainFilePath =  @"C:\Users\USUARIO\Downloads\Pc4sent\EcommercePC4\EcommercePC4\MLModels\ratings-data.csv";
+        public const string RetrainFilePath =  @"C:\Users\USUARIO\Downloads\PcVeroProgra4\Pc4Vero\EcommercePC4\MLModels\ratings-data.csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
@@ -91,7 +91,7 @@ namespace EcommercePC4
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"ProductId",inputColumnName:@"ProductId",addKeyValueAnnotationsAsText:false)      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"UserId",inputColumnName:@"UserId",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.Recommendation().Trainers.MatrixFactorization(new MatrixFactorizationTrainer.Options(){LabelColumnName=@"Label",MatrixColumnIndexColumnName=@"UserId",MatrixRowIndexColumnName=@"ProductId",ApproximationRank=10,LearningRate=0.3726903665213018,NumberOfIterations=217,Quiet=true}))      
+                                    .Append(mlContext.Recommendation().Trainers.MatrixFactorization(new MatrixFactorizationTrainer.Options(){LabelColumnName=@"Label",MatrixColumnIndexColumnName=@"UserId",MatrixRowIndexColumnName=@"ProductId",ApproximationRank=11,LearningRate=0.0518470595873878,NumberOfIterations=361,Quiet=true}))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"UserId",inputColumnName:@"UserId"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"ProductId",inputColumnName:@"ProductId"));
 

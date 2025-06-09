@@ -6,14 +6,18 @@
 
 <h2>Análisis de Sentimiento</h2>
 
-<br>
-<form method="post" asp-action="Analyze">
-    <textarea name="userText" rows="4" cols="50" required></textarea><br />
+<form method="post" asp-action="Predict">
+    <textarea name="inputText" rows="4" cols="50" required></textarea><br />
     <button type="submit">Analizar</button>
 </form>
+
 
 @if (ViewBag.Prediction != null)
 {
     <h3>Resultado: @ViewBag.Prediction</h3>
     <p>Confianza: @ViewBag.Score</p>
 }
+
+<h3>Estado de depuración:</h3>
+<p>@ViewBag.Prediction</p>
+<p>@ViewBag.Score</p>

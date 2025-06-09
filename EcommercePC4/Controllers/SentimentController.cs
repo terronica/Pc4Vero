@@ -29,8 +29,14 @@ namespace EcommercePC4.Controllers
         [HttpPost]
         public IActionResult Predict(string inputText)
         {
+            Console.WriteLine($"🧪 Texto recibido: {inputText}");
+
             var result = _sentimentService.Predict(inputText);
-            return View(result);
+            ViewBag.Prediction = result.Prediction ? "Positivo" : "Negativo";
+            ViewBag.Score = result.Probability.ToString("P2");
+
+            Console.WriteLine($"✅ Resultado: {ViewBag.Prediction}, Confianza: {ViewBag.Score}");
+            return View("Index");
         }
     }
 }

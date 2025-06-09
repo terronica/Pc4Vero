@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using EcommercePC4.MLModels;
-using EcommercePC4.MLModels;
+
 
 
 namespace EcommercePC4.MLModels
@@ -26,6 +26,12 @@ namespace EcommercePC4.MLModels
                 var prediction = MLModel.Predict(input); 
                 recommendations.Add((productId, prediction.Score));
             }
+            Console.WriteLine($"Recomendaciones para usuario {userId}:");
+            foreach (var r in recommendations)
+            {
+                Console.WriteLine(r);
+            }
+
 
             return recommendations
                 .OrderByDescending(r => r.score)

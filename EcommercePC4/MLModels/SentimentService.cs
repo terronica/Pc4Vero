@@ -25,13 +25,14 @@ namespace EcommercePC4.MLModels
 
             // ITransformer trainedModel = _mlContext.Model.Load(modelPath, out _);
             // _predictionEngine = _mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(trainedModel);
+            
         }
 
         public SentimentPrediction Predict(string text)
         {
             var input = new SentimentData { Text = text };
             return _predictionEngine.Predict(input);
-        }
 
+        }
     }
 }

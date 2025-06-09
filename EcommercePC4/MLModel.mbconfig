@@ -8,7 +8,7 @@
     "KeepPunctuations": false,
     "AllowQuoting": false,
     "Type": "TabularFile",
-    "FilePath": "C:\\Users\\USUARIO\\Downloads\\Pc4sent\\EcommercePC4\\EcommercePC4\\MLModels\\ratings-data.csv",
+    "FilePath": "C:\\Users\\USUARIO\\Downloads\\PcVeroProgra4\\Pc4Vero\\EcommercePC4\\MLModels\\ratings-data.csv",
     "Delimiter": ",",
     "DecimalMarker": ".",
     "HasHeader": true,
@@ -51,8 +51,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "MatrixFactorization",
-        "Score": -1.0834926661127406,
-        "RuntimeInSeconds": 1.871,
+        "Score": -0.71324873102330477,
+        "RuntimeInSeconds": 2.958,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
           "e0": {
@@ -69,9 +69,9 @@
             "LabelColumnName": "Label",
             "MatrixColumnIndexColumnName": "UserId",
             "MatrixRowIndexColumnName": "ProductId",
-            "ApproximationRank": 10,
-            "LearningRate": 0.37269036652130177,
-            "NumberOfIterations": 217,
+            "ApproximationRank": 11,
+            "LearningRate": 0.0518470595873878,
+            "NumberOfIterations": 361,
             "Quiet": true
           },
           "e3": {
@@ -88,8 +88,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "MatrixFactorization",
-        "Score": -1.1583182696731646,
-        "RuntimeInSeconds": 1.862,
+        "Score": -0.98808947397423785,
+        "RuntimeInSeconds": 2.051,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
           "e0": {
@@ -107,8 +107,8 @@
             "MatrixColumnIndexColumnName": "UserId",
             "MatrixRowIndexColumnName": "ProductId",
             "ApproximationRank": 10,
-            "LearningRate": 0.32242429329275829,
-            "NumberOfIterations": 226,
+            "LearningRate": 0.04361326408641459,
+            "NumberOfIterations": 254,
             "Quiet": true
           },
           "e3": {
@@ -125,8 +125,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "MatrixFactorization",
-        "Score": -1.1709747052275019,
-        "RuntimeInSeconds": 1.078,
+        "Score": -1.1077183316543027,
+        "RuntimeInSeconds": 5.302,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
           "e0": {
@@ -143,9 +143,9 @@
             "LabelColumnName": "Label",
             "MatrixColumnIndexColumnName": "UserId",
             "MatrixRowIndexColumnName": "ProductId",
-            "ApproximationRank": 10,
-            "LearningRate": 0.24063639268093076,
-            "NumberOfIterations": 130,
+            "ApproximationRank": 16,
+            "LearningRate": 0.40024910483320497,
+            "NumberOfIterations": 580,
             "Quiet": true
           },
           "e3": {
@@ -162,8 +162,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "MatrixFactorization",
-        "Score": -1.211015660176104,
-        "RuntimeInSeconds": 1.446,
+        "Score": -1.1484184016179253,
+        "RuntimeInSeconds": 2.764,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
           "e0": {
@@ -181,8 +181,8 @@
             "MatrixColumnIndexColumnName": "UserId",
             "MatrixRowIndexColumnName": "ProductId",
             "ApproximationRank": 10,
-            "LearningRate": 0.18310082597770319,
-            "NumberOfIterations": 178,
+            "LearningRate": 0.12107810899497676,
+            "NumberOfIterations": 280,
             "Quiet": true
           },
           "e3": {
@@ -199,8 +199,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "MatrixFactorization",
-        "Score": -1.2199292452265833,
-        "RuntimeInSeconds": 1.906,
+        "Score": -1.2234155421991111,
+        "RuntimeInSeconds": 1.685,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
           "e0": {
@@ -217,9 +217,9 @@
             "LabelColumnName": "Label",
             "MatrixColumnIndexColumnName": "UserId",
             "MatrixRowIndexColumnName": "ProductId",
-            "ApproximationRank": 10,
-            "LearningRate": 0.3139429664935921,
-            "NumberOfIterations": 232,
+            "ApproximationRank": 22,
+            "LearningRate": 0.16321241757882066,
+            "NumberOfIterations": 200,
             "Quiet": true
           },
           "e3": {
@@ -242,7 +242,7 @@
     },
     "Schema": "e0 * e1 * e2 * e3 * e4",
     "MetricName": "RSquared",
-    "ModelFilePath": "C:\\Users\\USUARIO\\Downloads\\Pc4sent\\EcommercePC4\\EcommercePC4\\MLModel.mlnet"
+    "ModelFilePath": "C:\\Users\\USUARIO\\Downloads\\PcVeroProgra4\\Pc4Vero\\EcommercePC4\\MLModel.mlnet"
   },
   "Type": "TrainingConfig",
   "Version": 5,
@@ -250,7 +250,7 @@
     "Version": 2,
     "Subsampling": false,
     "Type": "RecommendationTrainingOption",
-    "TrainingTime": 20,
+    "TrainingTime": 40,
     "LabelColumn": "Label",
     "UserIdColumn": "UserId",
     "ItemIdColumn": "ProductId",
